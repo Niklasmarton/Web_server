@@ -13,7 +13,7 @@ export async function middlewareLogResponses(req: Request, res: Response, next: 
 }
 
 export async function middlewareMetricsInc(req: Request, res: Response, next: NextFunction): Promise<void> {
-    config.fileserverHits += 1;
+    config.api.fileServerHits += 1;
     next();
 }
 
